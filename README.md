@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CPRG 306: Web Development 2 - Assignments
 
-## Getting Started
+This Next.js project showcases assignments for the **CPRG 306: Web Development 2** course. The project includes interactive features, such as hover effects on assignment links, implemented using React hooks.
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project is a simple webpage built with Next.js. It dynamically displays links to assignments with hover effects. For example, in the `HomePage` component, you can see an interactive link to the **Week 2 Assignment**, where the link text changes color and gets underlined when hovered.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Interactive Hover Effects**: Links change appearance when hovered over.
+- **React Hooks**: The `useState` hook is used to manage hover states.
+- **Styled with Inline CSS**: Custom inline styles are applied for layout and design.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation
 
-## Learn More
+To run this project locally, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/CPRG306-Assignments.git
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Navigate to the project directory**:
+    ```bash
+    cd CPRG306-Assignments
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+4. **Run the development server**:
+    ```bash
+    npm run dev
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. **Visit the project**:  
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the homepage.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Usage
+
+Once the server is running, you will see the homepage displaying the title and a link to the **Week 2 Assignment**. When you hover over the link, its color changes to green and it becomes underlined, indicating that the link is interactive.
+
