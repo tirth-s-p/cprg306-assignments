@@ -9,7 +9,6 @@ This project is a simple webpage built with Next.js. It dynamically displays lin
 ## Features
 
 - **Interactive Hover Effects**: Links change appearance when hovered over.
-- **React Hooks**: The `useState` hook is used to manage hover states.
 - **Styled with Inline CSS**: Custom inline styles are applied for layout and design.
 
 ## Installation
@@ -18,12 +17,12 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/CPRG306-Assignments.git
+    git clone https://github.com/tirth-s-p/cprg306-assignments.git
     ```
 
 2. **Navigate to the project directory**:
     ```bash
-    cd CPRG306-Assignments
+    cd cprg306-assignments
     ```
 
 3. **Install dependencies**:
