@@ -22,6 +22,45 @@ export default function HomePage() {
                     >
                         Week 2 Assignment
                     </a>
+                            <br />
+                    <a 
+                        href="/week-3" 
+                        style={isHovered ? { ...styles.anchor, ...styles.anchorHovered } : styles.anchor}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    >
+                        Week 3 Assignment
+                    </a>
+                            <br />
+                    <a 
+                        href="/week-4" 
+                        style={isHovered ? { ...styles.anchor, ...styles.anchorHovered } : styles.anchor}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    >
+                        Week 4 Assignment
+                    </a>
+                            <br />
+                    <a 
+                        href="/week-5" 
+                        style={isHovered ? { ...styles.anchor, ...styles.anchorHovered } : styles.anchor}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    >
+                        Week 5 Assignment
+                    </a>
+                            <br />
+                    <a 
+                        href="/week-6" 
+                        style={isHovered ? { ...styles.anchor, ...styles.anchorHovered } : styles.anchor}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    >
+                        Week 6 Assignment
+                    </a>
+                            <br />
+                            
+                    
                 </p>
             </div>
         </main>
