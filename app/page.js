@@ -58,6 +58,15 @@ export default function HomePage() {
                 >
                     Week 6 Assignment
                 </a>
+                <br />
+                <a 
+                    href="/week-9" 
+                    style={isHovered ? { ...styles.anchor, ...styles.anchorHovered } : styles.anchor}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    Week 9 Assignment
+                </a>
                 
             </p>
         </div>
