@@ -1,34 +1,26 @@
 "use client";
+
+import Link from "next/link";
 import { useUserAuth } from "./_utils/auth-context";
 
-export default function Page() {
+export default function LandingPage() {
   const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
-
-  const handleSignIn = async () => {
-    try {
-      await gitHubSignIn();
-    } catch (error) {
-      console.error("Error signing in:", error);
-    }
-  };
-
-  const handleSignOut = async () => {
-    try {
-      await firebaseSignOut();
-    } catch (error) {
-      console.error("Error signing out:", error);
-    }
-  };
 
   return (
     <div>
-      {user ? (
-        <>
-          <p>Welcome, {user.displayName} ({user.email})</p>
-          <button onClick={handleSignOut}>Logout</button>
-        </>
+
+      {!user ? (
+        <div>
+          <p>Please sign in to continue.</p>
+          <button onClick={gitHubSignIn}>Sign in with GitHub</button>
+        </div>
       ) : (
-        <button onClick={handleSignIn}>Login with GitHub</button>
+        <div>
+          <p>Signed in as {user.displayName} ({user.email}).</p>
+          <button onClick={firebaseSignOut}>Sign out</button>
+          <br />
+          <Link href="/week-9/shopping-list">Continue to your Shopping List</Link>
+        </div>
       )}
     </div>
   );
