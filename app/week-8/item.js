@@ -1,6 +1,6 @@
 'use client';
 
-export default function Item({ item }) {
+export default function Item({ item, onSelect }) {
   const categoryIcons = {
     Produce: '🍌',
     Bakery: '🍞',
@@ -13,13 +13,18 @@ export default function Item({ item }) {
 
   return (
     <li
+      onClick={() => onSelect(item)}
       style={{
         padding: '10px',
         backgroundColor: '#252946',
         borderRadius: '5px',
         marginBottom: '10px',
         color: '#ffffff',
+        cursor: 'pointer', // Indicate that the item is clickable
+        transition: 'background-color 0.2s ease',
       }}
+      onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#343a59')}
+      onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#252946')}
     >
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <span style={{ fontWeight: 'bold' }}>
