@@ -6,6 +6,7 @@ export default function NewItem({ onAddItem }) {
   const [name, setName] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,9 +21,15 @@ export default function NewItem({ onAddItem }) {
       category,
     };
     onAddItem(newItem);
+
+    // Reset form fields
     setName('');
     setQuantity(1);
     setCategory('');
+
+    // Show success message
+    setSuccessMessage('Item added successfully!');
+    setTimeout(() => setSuccessMessage(''), 3000); // Hide after 3 seconds
   };
 
   return (
@@ -49,8 +56,8 @@ export default function NewItem({ onAddItem }) {
           fontSize: '16px',
           borderRadius: '5px',
           border: '1px solid #ccc',
-          color: '#000000', 
-          backgroundColor: '#ffffff', 
+          color: '#000000',
+          backgroundColor: '#ffffff',
         }}
         required
       />
@@ -79,8 +86,8 @@ export default function NewItem({ onAddItem }) {
             fontSize: '16px',
             borderRadius: '5px',
             border: '1px solid #ccc',
-            color: '#000000', 
-            backgroundColor: '#ffffff', 
+            color: '#000000',
+            backgroundColor: '#ffffff',
           }}
         />
         <button
@@ -133,6 +140,18 @@ export default function NewItem({ onAddItem }) {
       >
         +
       </button>
+      {successMessage && (
+        <p
+          style={{
+            flexBasis: '100%',
+            textAlign: 'center',
+            color: 'green',
+            marginTop: '10px',
+          }}
+        >
+          {successMessage}
+        </p>
+      )}
     </form>
   );
 }
